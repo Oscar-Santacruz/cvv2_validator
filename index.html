@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Credit Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>TARJETA DE CREDITO</h1>
+<div class="cards">
+<div class="card front">
+		<span class="number">1234 5678 9012 3456</span>
+		<span class="name">OSCAR SANTACRUZ</span>
+		<span class="expiration">06/24</span>
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2000px-MasterCard_Logo.svg.png">
+</div>
+<div class="card back">
+	
+	<div class="mag-stripe"></div>
+	<div class="signature front">See ID <span class="security_code">000</span></div>
+	<img class="logo back" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2000px-MasterCard_Logo.svg.png">
+	<span class="front_part">
+	<span class="number">1234 5678 9012 3456</span>
+		<span class="name">OSCAR SANTACRUZ</span>
+		<span class="expiration">06/24</span></span>
+		</div>
+</div>
+<div class="buttons"><h2>Marcar:</h2>
+	<button class="button6digitos-class" id="Number" data-title="number">BIN (6) digitos</button>
+	<button class="button4ultimos-class" id="Number4ultimos" data-title="number">4 ultimos</button>
+	<button class="button-class" id="Exp" data-title="expiration">Fecha de Vencimiento</button>
+	<button class="button-class" id="Name" data-title="name">Nombre</button>
+	<button class="button-class" id="Sec" data-title="security_code">CVV2</button></div>
+<div class="buttons">Numero de Documento:
+	<input id="NroDocuento" data-title="number">
+	<button id="NroDocuento" data-title="number">Calcular</button>
+</div>
+<!-- partial -->
+  <script src='https://codepen.io/jackharner/pen/eNPwyw.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

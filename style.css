@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+body {
+  background: #333;
+}
+
+.cards {
+  position: relative;
+  width: 800px;
+  display: block;
+  margin: 15px auto;
+}
+
+h1, h2 {
+  color: #bababa;
+  font-size: 5em;
+  letter-spacing: 4px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000, -2px -2px 1px #fff;
+  width: 100%;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+.card {
+  display: inline-block;
+  margin: 10px;
+  background: linear-gradient(135deg, #003876 0%, rgba(25, 95, 135, 0.8) 100%);
+  border-radius: 10px;
+  font-family: sans-serif;
+  height: 212.5px;
+  min-height: 212.5px;
+  min-width: 337.5px;
+  position: relative;
+  width: 337.5px;
+  box-shadow: 2px 2px 5px #000;
+}
+.card.front {
+  background: url("conti.png") center center/cover;
+  padding: 20px;
+  background-size: 380px 255px; /* Ancho x Alto */
+  background-position: top right; /* Posición vertical, horizontal */
+}
+.card.back {
+  padding: 20px 20px;
+}
+
+.number {
+  bottom: 30%;
+  color: #bababa;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000, -1px -1px 1px #fff;
+  width: calc(100% - 40px);
+}
+
+.name {
+  bottom: 10%;
+  color: #bababa;
+  letter-spacing: 3px;
+  position: absolute;
+  text-shadow: 1px 1px 2px #000, -1px -1px 1px #fff;
+}
+
+.expiration {
+  bottom: 18%;
+  color: #bababa;
+  letter-spacing: 4px;
+  position: absolute;
+  right: 35%;
+  text-shadow: 1px 1px 2px #000, -1px -1px 1px #fff;
+}
+.expiration:before {
+  color: rgba(255, 255, 255, 0.4);
+  content: "VALID THRU";
+  display: inline-block;
+  font-size: 0.01em;
+  letter-spacing: 1px;
+  line-height: 1em;
+  text-shadow: none;
+  vertical-align: middle;
+  width: 35px;
+}
+
+.mag-stripe {
+  background: #000;
+  height: 15%;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  width: calc(100%);
+}
+
+.front_part {
+  display: block;
+  height: calc(100% - 20px);
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  transform: rotateY(180deg);
+  width: calc(100% - 20px);
+}
+
+.back .number {
+  bottom: 30%;
+  color: #003876;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  position: absolute;
+  text-align: center;
+  text-shadow: -1px 1px 2px #333, -1px 1px 1px #000;
+  width: calc(100% - 40px);
+}
+
+.back .name {
+  bottom: 10%;
+  color: #003876;
+  fill: transparent;
+  letter-spacing: 3px;
+  position: absolute;
+  text-shadow: -1px 1px 2px #333, -1px 1px 1px #000;
+}
+
+.back .expiration {
+  bottom: 18%;
+  color: #003876;
+  letter-spacing: 4px;
+  mix-blend-mode: screen;
+  position: absolute;
+  right: 35%;
+  text-shadow: -1px 1px 2px #333, -1px 1px 1px #000;
+}
+.back .expiration:before {
+  content: "";
+}
+
+.signature {
+  background: #aaa;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 40px;
+  height: 15%;
+  line-height: 40px;
+  padding-left: 10px;
+  position: absolute;
+  right: 20px;
+  top: 35%;
+  vertical-align: middle;
+  width: 65%;
+}
+.signature .security_code {
+  background: #fff;
+  content: "123";
+  font-family: sans-serif;
+  font-size: 0.4em;
+  font-style: italic;
+  height: 100%;
+  padding: 0 5px;
+  position: absolute;
+  right: 0px;
+}
+
+.logo {
+  bottom: 10px;
+  height: 20%;
+  position: absolute;
+  right: 10px;
+}
+
+.logo.back {
+  background: #eee;
+  border-radius: 50%/100%;
+  filter: grayscale(100%);
+  left: 5px;
+  opacity: 0.4;
+  padding: 5px;
+  top: 40%;
+}
+
+.highlight:after {
+  content: "";
+  position: absolute;
+  border: 3px solid red;
+  width: 100%;
+  height: 100%;
+  right: 50%;
+  padding: 10px;
+  bottom: 50%;
+  transform: translatex(50%) translatey(50%);
+  border-radius: 100%;
+  transition: all 300ms;
+}
+
+.highlight6digitos:after {
+  content: "";
+  position: absolute;
+  border: 3px solid red;
+  width: 30%;
+  height: 100%;
+  right: 80%;
+  padding: 10px;
+  bottom: 50%;
+  transform: translatex(50%) translatey(50%);
+  border-radius: 100%;
+  transition: all 300ms;
+}
+
+.highlight4ultimos:after {
+  content: "";
+  position: absolute;
+  border: 3px solid red;
+  width: 20%;
+  height: 100%;
+  right: 15%;
+  padding: 10px;
+  bottom: 50%;
+  transform: translatex(50%) translatey(50%);
+  border-radius: 100%;
+  transition: all 300ms;
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: 2px solid #aaa;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 0.5em;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #000;
+}
